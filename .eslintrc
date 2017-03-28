@@ -1,0 +1,33 @@
+{
+  "extends": [
+    "airbnb"
+  ],
+  "plugins": [
+    "chai-friendly"
+  ],
+  "env": {
+    "browser" : true,
+    "node": true,
+    "mocha": true
+  },
+  "globals": {
+    "ENV_DEV": false,
+    "ENV_TEST": false,
+    "ENV_PROD": false,
+    "REPORT_COVERAGE": false
+  },
+  "rules": {
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "comma-dangle": ["error", {
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "never",
+    }],
+    "no-unused-expressions": 0,
+    "chai-friendly/no-unused-expressions": 2,
+    "import/no-extraneous-dependencies": 0,
+    "import/first": 0
+  }
+}

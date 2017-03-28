@@ -1,0 +1,13 @@
+/**
+ * Applies transition specified by $duration and $property to all properties
+ * specified in list $properties
+ */
+@mixin transition-all ($properties, $duration, $effect) {
+  $transitions: ();
+
+  @each $property in $properties {
+    $transitions: append($transitions, $property $duration $effect, comma);
+  }
+
+  transition: $transitions;
+}

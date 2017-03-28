@@ -1,0 +1,51 @@
+@import 'elements';
+@import 'effects';
+@import 'layout';
+
+/**
+ * Mixin appling circle expansion transition to listed properties
+ */
+@mixin circle-expansion-transition ($properties) {
+  @include transition-all($properties, .3s, ease-in-out);
+}
+
+/**
+ * Base container style for circle content areas
+ */
+@mixin circle-content-base {
+  text-align: center;
+  width: 100%;
+}
+
+.circle {
+  @include circle(60px);
+  @include circle-expansion-transition((width, height))
+  position: relative;
+
+  > .mid-content {
+    @include circle-content-base;
+    @include center-vertical-absolute;
+    @include circle-expansion-transition(opacity);
+    opacity: 0;
+  }
+
+  > .top-content {
+    @include circle-content-base;
+    position: absolute;
+    top: 30px;
+  }
+
+  > .bottom-content {
+    @include circle-content-base;
+    bottom: 30px;
+    position: absolute;
+  }
+
+  &:hover {
+    @include circle(100px);
+
+    & > .mid-content {
+      opacity: 1;
+    }
+  }
+}
