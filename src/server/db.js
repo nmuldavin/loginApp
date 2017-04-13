@@ -1,5 +1,5 @@
-import PouchDB from 'pouchdb';
+const PouchDB = require('pouchdb');
 
 const db = new PouchDB('users');
 
-export default db;
+module.exports = db;
