@@ -17,7 +17,7 @@
     "lint": "eslint dev src",
     "start": "better-npm-run start",
     "start:prod": "better-npm-run start:prod",
-    "postinstall" : "node ./dev/link"
+    "postinstall": "node ./dev/link"
   },
   "betterScripts": {
     "compile": {
@@ -151,6 +151,7 @@
     "camelize": "^1.0.0",
     "jsonstream": "^1.0.3",
     "most": "^1.2.2",
+    "pouchdb": "^6.1.2",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-redux": "^5.0.3",
